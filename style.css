@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+/* ------- */
+/* top bar */
+/* ------- */
+
+.top-bar {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Vertically center the items */
+    padding: 10px 20px; /* Padding around the bar */
+    background-color: #333; /* Background color for the top bar */
+    color: white;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.right-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.right-buttons button {
+    background-color: #444;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.right-buttons button:hover {
+    background-color: #555;
+}
+
+/* ---------- */
+/* Containers */
+/* ---------- */
+
+.horizontal-container {
+    display: flex;
+    grid-template-columns: 200px 1fr;
+    height: 100%;
+}
+
+.side-container {
+    display: flex;
+    gap: 1rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+
+.vertical-container {
+    display: table-row;
+    height: 100%;
+}
+
+/* -------- */
+/* Side Bar */
+/* -------- */
+
+.side-bar {
+    background-color: #ddd;
+    color: #fff;
+    padding: 1rem;
+}
+
+.side-bar ul {
+    list-style: none;
+}
+
+.side-bar ul li {
+    margin: 1rem 0;
+}
+
+.side-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.side-button-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.side-button {
+    background-color: #ddd;
+    color: black;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+.settings-side-button {
+    margin-top: 100%;
+}
+
+.side-button:hover {
+    background-color: #bbb;
+}
+
+/* --------------------------- */
+/* Main content and grid stuff */
+/* --------------------------- */
+
+.main-content {
+    /* Gap Between Other Content */
+    padding-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 10rem;
+
+    /* Grid Style */
+    display: grid;
+    grid-auto-flow: column; 
+    grid-template-rows: repeat(2, 200px); 
+    grid-auto-columns: 1fr; 
+
+    /* Gap Between Grid Items */
+    gap: 2rem;
+}
+
+.grid-item {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
+
+    padding: 2rem;
+    text-align: left;
+    border-radius: 8px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+.grid-item-header {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.grid-item-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    color: #333;
+}
+
+/* --------- */
+/* Drop Down */
+/* --------- */
+
+.dropdown {
+    position: relative;
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+  
+.dropdown-button {
+    background-color: white;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
+
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    width: auto;
+    white-space: nowrap;
+}
+  
+.dropdown-button:hover {
+    background-color: #ddd;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-icon {
+    margin-left: 10px;
+    font-size: 1rem;
+}
